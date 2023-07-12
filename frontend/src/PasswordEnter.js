@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import FormGroup from "react-bootstrap/esm/FormGroup";
+import FormGroup from "react-bootstrap/FormGroup";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/esm/Button";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Container } from "@chakra-ui/react";
+
 const PasswordEnter = ({ onSubmit }) => {
   const [enteredPassword, setEnteredPassword] = useState("");
 
@@ -20,14 +21,14 @@ const PasswordEnter = ({ onSubmit }) => {
             <InputGroup>
               <Form.Control
                 style={{
-                  width: "auto",
+                  width: "100%",
                 }}
                 type="password"
                 placeholder="Enter Password to unlock this paste"
                 onChange={(e) => setEnteredPassword(e.target.value)}
               />
               <Button
-                className=""
+                className="mt-2 mt-md-0"
                 variant="primary"
                 onClick={handlePasswordSubmit}
               >
