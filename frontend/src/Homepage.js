@@ -123,7 +123,7 @@ const Homepage = () => {
                   </InputGroup>
                 </div>
               </Container>
-              <Container className="p-2">
+              <Container className="p-1">
                 <div className="ml-auto">
                   <InputGroup size="lg" className="mb-3">
                     <InputGroup.Text
@@ -142,21 +142,16 @@ const Homepage = () => {
               </Container>
 
               <Container className="mb-5">
-                <Row>
-                  <Col></Col>
-                  <Col>
-                    <Button
-                      variant="success"
-                      onClick={submitHandler}
-                      style={{
-                        paddingLeft: "auto",
-                        width: "150px",
-                      }}
-                    >
-                      Create New Paste
-                    </Button>
-                  </Col>
-                </Row>
+                <Button
+                  variant="success"
+                  onClick={submitHandler}
+                  style={{
+                    marginLeft: "65%",
+                    width: "auto",
+                  }}
+                >
+                  Create New Paste
+                </Button>
               </Container>
             </Container>
           </Col>
