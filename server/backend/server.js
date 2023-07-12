@@ -10,8 +10,9 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    allowedHeaders: ["Content-Type"],
-    origin: ["https://pasteit-now.vercel.app/"],
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
   })
 );
 app.use(express.json());
