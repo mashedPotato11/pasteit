@@ -28,7 +28,10 @@ const PasswordEnter = ({ onSubmit }) => {
                 onChange={(e) => setEnteredPassword(e.target.value)}
               />
               <Button
-                className="mt-2 mt-md-0"
+                style={{
+                  width: "100%",
+                }}
+                className="mt-2 mt-md-0 px-4"
                 variant="primary"
                 onClick={handlePasswordSubmit}
               >
