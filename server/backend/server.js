@@ -11,7 +11,7 @@ const app = express();
 app.use(
   cors({
     allowedHeaders: ["Content-Type"],
-    origin: ["http://localhost:3000"],
+    origin: ["https://pasteit-now.vercel.app/"],
   })
 );
 app.use(express.json());
