@@ -31,7 +31,7 @@ const PasswordEnter = ({ onSubmit }) => {
                 style={{
                   width: "100%",
                 }}
-                className="mt-2 mt-md-0 px-4"
+                className="mt-2 px-4"
                 variant="primary"
                 onClick={handlePasswordSubmit}
               >
