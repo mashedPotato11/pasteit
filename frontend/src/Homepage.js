@@ -146,8 +146,9 @@ const Homepage = () => {
                   variant="success"
                   onClick={submitHandler}
                   style={{
-                    marginLeft: "65%",
-                    width: "auto",
+                    marginLeft: "40%",
+
+                    width: "60%",
                   }}
                 >
                   Create New Paste
