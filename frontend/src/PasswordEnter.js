@@ -19,7 +19,9 @@ const PasswordEnter = ({ onSubmit }) => {
           <FloatingLabel>
             <InputGroup>
               <Form.Control
-                style={{ width: "auto" }}
+                style={{
+                  width: "auto",
+                }}
                 type="password"
                 placeholder="Enter Password to unlock this paste"
                 onChange={(e) => setEnteredPassword(e.target.value)}
