@@ -4,13 +4,8 @@ import NavBar from "./NavBar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import axios from "axios";
-import Stack from "react-bootstrap/Stack";
-import FormGroup from "react-bootstrap/esm/FormGroup";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
+
 import InputGroup from "react-bootstrap/InputGroup";
-import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import Container from "react-bootstrap/Container";
@@ -21,7 +16,7 @@ const Homepage = () => {
   const [lang, setLang] = useState("text");
   const [password, setPassword] = useState("default");
   const [title, setTitle] = useState("");
-  const saveSnippet = () => {};
+
   const [content, setContent] = React.useState();
 
   const submitHandler = async () => {
@@ -29,7 +24,6 @@ const Homepage = () => {
       return;
     }
 
-    console.log(content, password);
     try {
       const config = {
         headers: {
@@ -38,14 +32,15 @@ const Homepage = () => {
       };
 
       const { data } = await axios.post(
-        "/api/snippets",
+        "https://pasteit-now.onrender.com/api/snippets",
         { title, content, password },
         config
       );
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate(`/${data.slug}`, { password, setPassword });
-
-      console.log(JSON.stringify(data));
+      navigate(`/${data.slug}`, {
+        password,
+        setPassword,
+      });
     } catch (error) {
       throw new Error(error.message);
     }

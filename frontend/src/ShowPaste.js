@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LoadingSkeleton from "./LoadingSkeleton";
+
 import NavBar from "./NavBar";
 import axios from "axios";
 import CodeEditor from "@uiw/react-textarea-code-editor";
@@ -24,14 +24,13 @@ const ShowPaste = () => {
   const fetchContent = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`/api/snippets/${key}/${password}`);
+      const response = await axios.get(
+        `https://pasteit-now.onrender.com/api/snippets/${key}/${password}`
+      );
       const responseData = response.data;
       setData(responseData);
       setShowContent(true); // Assuming the response indicates the password is valid
       setWrongPasswordCount(0); // Reset the wrong password count
-      if (response.status == 404) {
-        console.log("working");
-      }
     } catch (error) {
       if (error.response && error.response.status === 404) {
         // API returned a 404 status
@@ -63,7 +62,7 @@ const ShowPaste = () => {
     if (wrongPasswordCount >= 3) {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 4000);
     }
   }, [wrongPasswordCount]);
 

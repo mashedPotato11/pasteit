@@ -34,7 +34,7 @@ const PasswordEnter = ({ onSubmit }) => {
             </InputGroup>
           </FloatingLabel>
         </FormGroup>
-        <div style={{ height: "70vh" }}>
+        <div style={{ height: "80vh" }}>
           <h1></h1>
         </div>
       </Container>

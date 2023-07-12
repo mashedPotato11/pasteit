@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 const NotFoundPage = () => {
   return (
-    <div className="not-found-page p-5" style={{ height: "100vh" }}>
+    <div className="not-found-page p-5 px-5" style={{ height: "100vh" }}>
       <Container className="text-center">
         <h1 className="pt-5">404 Error</h1>
         <h3 className="text-white">Page Not Found</h3>

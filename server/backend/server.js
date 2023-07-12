@@ -19,5 +19,5 @@ app.use("/api/snippets", pasteRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server started on ${process.env.PORT}`);
+  console.log(`Server started on ${PORT}`);
 });
