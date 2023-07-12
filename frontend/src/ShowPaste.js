@@ -131,7 +131,7 @@ const ShowPaste = () => {
                     }}
                   />
                 </Container>
-                <Container className="w-200"></Container>
+                <Container style={{ height: "20vh" }}></Container>
               </>
             )}
             {!loading && notFound && (
