@@ -116,15 +116,15 @@ const ShowPaste = () => {
                 <Container className="w-tc-editor-var">
                   <CodeEditor
                     className="d-flex"
-                    width="1100px"
-                    minHeight="800px"
+                    width="auto"
+                    minHeight="400px"
                     value={data?.content}
                     language="text"
                     disabled
                     placeholder={data?.content}
                     padding={15}
                     style={{
-                      fontSize: 18,
+                      fontSize: 12,
                       backgroundColor: "#2b2b2b",
                       fontFamily:
                         "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",

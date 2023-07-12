@@ -52,7 +52,9 @@ const Homepage = () => {
       </div>
       <div className="text-center mt-5">
         <h1>Paste your snippet now!</h1>
-        <p>Click on Create Snippet and save it for further use.</p>
+        <p className="px-3">
+          Click on Create Snippet and save it for further use.
+        </p>
       </div>
       <Container className="">
         <div class="App-tools mt-5 mb-2">
@@ -79,9 +81,9 @@ const Homepage = () => {
       </Container>
       <Container className="w-tc-editor-var">
         <CodeEditor
-          className="d-flex"
-          width="1100px"
-          minHeight="800px"
+          // className="d-flex"
+          width="auto"
+          minHeight="400px"
           // data-color-mode="dark"
           value={content}
           language={lang}
@@ -89,7 +91,7 @@ const Homepage = () => {
           onChange={(evn) => setContent(evn.target.value)}
           padding={15}
           style={{
-            fontSize: 18,
+            fontSize: 12,
             backgroundColor: "#2b2b2b",
             fontFamily:
               "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
@@ -99,17 +101,17 @@ const Homepage = () => {
 
       <Container className="mt-5">
         <Row>
-          <Col className="col-sm-12 col-lg-6">
-            <Container className="border mr-5 mb-2" data-bs-theme="dark">
+          <Col className="col-12 col-lg-6">
+            <Container className="border mr-5 mb-3" data-bs-theme="dark">
               <Container className="p-2">
                 <h3>Paste Options</h3>
               </Container>
-              <Container className="p-2">
+              <Container className="p-1">
                 <div className="ml-auto">
-                  <InputGroup size="lg" className="mt-5 mb-3">
+                  <InputGroup size="lg" className="mt-3 mb-3">
                     <InputGroup.Text
                       id="inputGroup-sizing-lg"
-                      style={{ width: "120px" }}
+                      style={{ width: "105px" }}
                     >
                       TITLE
                     </InputGroup.Text>
@@ -121,12 +123,12 @@ const Homepage = () => {
                   </InputGroup>
                 </div>
               </Container>
-              <Container className="p-2">
+              <Container className="p-1">
                 <div className="ml-auto">
                   <InputGroup size="lg" className="mb-3">
                     <InputGroup.Text
                       id="inputGroup-sizing-lg"
-                      style={{ width: "120px" }}
+                      style={{ width: "105px" }}
                     >
                       Password
                     </InputGroup.Text>
@@ -139,16 +141,23 @@ const Homepage = () => {
                 </div>
               </Container>
 
-              <div className="mb-5">
+              <Container className="mb-5">
                 <Row>
                   <Col></Col>
-                  <Col xs={4}>
-                    <Button variant="success" onClick={submitHandler}>
+                  <Col>
+                    <Button
+                      variant="success"
+                      onClick={submitHandler}
+                      style={{
+                        paddingLeft: "auto",
+                        width: "150px",
+                      }}
+                    >
                       Create New Paste
                     </Button>
                   </Col>
                 </Row>
-              </div>
+              </Container>
             </Container>
           </Col>
           <Col>

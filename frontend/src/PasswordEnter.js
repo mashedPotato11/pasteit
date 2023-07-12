@@ -13,19 +13,19 @@ const PasswordEnter = ({ onSubmit }) => {
   };
 
   return (
-    <div className="mt-1">
+    <div className="mt-3">
       <Container>
         <FormGroup>
           <FloatingLabel>
             <InputGroup>
               <Form.Control
-                style={{ width: "300px" }}
+                style={{ width: "auto" }}
                 type="password"
                 placeholder="Enter Password to unlock this paste"
                 onChange={(e) => setEnteredPassword(e.target.value)}
               />
               <Button
-                className="py-2"
+                className=""
                 variant="primary"
                 onClick={handlePasswordSubmit}
               >
