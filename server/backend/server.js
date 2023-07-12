@@ -8,7 +8,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 connectDB();
 const app = express();
-
+app.use(
+  cors({
+    allowedHeaders: ["Content-Type"],
+    origin: ["http://localhost:3000"],
+  })
+);
 app.use(express.json());
 
 //testing
@@ -17,7 +22,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/snippets", pasteRoutes);
-app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
