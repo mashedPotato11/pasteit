@@ -102,7 +102,7 @@ const Homepage = () => {
       <Container className="mt-5">
         <Row>
           <Col className="col-12 col-lg-6">
-            <Container className="border mr-5 mb-3" data-bs-theme="dark">
+            <Container className="border mr-5" data-bs-theme="dark">
               <Container className="p-2">
                 <h3>Paste Options</h3>
               </Container>
@@ -123,7 +123,7 @@ const Homepage = () => {
                   </InputGroup>
                 </div>
               </Container>
-              <Container className="p-1">
+              <Container className="p-2">
                 <div className="ml-auto">
                   <InputGroup size="lg" className="mb-3">
                     <InputGroup.Text
