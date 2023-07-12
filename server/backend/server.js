@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = require("cors");
 const pasteRoutes = require("./routes/pasteRoutes");
 
 const dotenv = require("dotenv");
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/snippets", pasteRoutes);
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
