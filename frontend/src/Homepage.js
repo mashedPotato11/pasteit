@@ -46,7 +46,7 @@ const Homepage = () => {
     }
   };
   return (
-    <div className="mb-3">
+    <div>
       <div className="mx-5 fluid">
         <NavBar />
       </div>
@@ -99,7 +99,7 @@ const Homepage = () => {
         />
       </Container>
 
-      <Container className="mt-5">
+      <Container className="mt-5 pb-2">
         <Row>
           <Col className="col-12 col-lg-6">
             <Container className="border mr-5" data-bs-theme="dark">
