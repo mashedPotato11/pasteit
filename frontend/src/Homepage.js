@@ -46,7 +46,7 @@ const Homepage = () => {
     }
   };
   return (
-    <div>
+    <div className="mb-3">
       <div className="mx-5 fluid">
         <NavBar />
       </div>
