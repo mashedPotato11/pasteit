@@ -44,7 +44,7 @@ const ShowPaste = () => {
     } finally {
       setTimeout(() => {
         setLoading(false); // Set loading to false after 2 seconds
-      }, 8000);
+      }, 3000);
     }
   };
 
@@ -62,7 +62,7 @@ const ShowPaste = () => {
     if (wrongPasswordCount >= 3) {
       setTimeout(() => {
         setLoading(false);
-      }, 8000);
+      }, 3000);
     }
   }, [wrongPasswordCount]);
 
@@ -119,7 +119,7 @@ const ShowPaste = () => {
                     width="auto"
                     minHeight="400px"
                     value={data?.content}
-                    language="text"
+                    language={data?.language}
                     disabled
                     placeholder={data?.content}
                     padding={15}

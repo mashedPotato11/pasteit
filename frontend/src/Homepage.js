@@ -13,7 +13,7 @@ import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router";
 const Homepage = () => {
   const navigate = useNavigate();
-  const [lang, setLang] = useState("text");
+  const [language, setLanguage] = useState("text");
   const [password, setPassword] = useState("default");
   const [title, setTitle] = useState("");
 
@@ -33,7 +33,7 @@ const Homepage = () => {
 
       const { data } = await axios.post(
         "https://pasteit-now.onrender.com/api/snippets",
-        { title, content, password },
+        { title, content, password, language },
         config
       );
       localStorage.setItem("userInfo", JSON.stringify(data));
@@ -60,17 +60,17 @@ const Homepage = () => {
         <div class="App-tools mt-5 mb-2">
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Language: {lang}
+              Language: {language}
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => setLang("text")}>
+              <Dropdown.Item onClick={() => setLanguage("text")}>
                 Language: Text
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => setLang("cpp")}>
+              <Dropdown.Item onClick={() => setLanguage("cpp")}>
                 Language: Cpp
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => setLang("js")}>
+              <Dropdown.Item onClick={() => setLanguage("js")}>
                 Language: Js
               </Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
@@ -86,7 +86,7 @@ const Homepage = () => {
           minHeight="400px"
           // data-color-mode="dark"
           value={content}
-          language={lang}
+          language={language}
           placeholder="Please enter your text or code."
           onChange={(evn) => setContent(evn.target.value)}
           padding={15}

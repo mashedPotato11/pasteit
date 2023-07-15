@@ -4,7 +4,7 @@ const Paste = require("../models/pasteModel");
 const User = require("../models/userModal");
 
 const createPaste = asyncHandler(async (req, res) => {
-  const { content, title, password } = req.body;
+  const { content, title, password, language } = req.body;
 
   if (!content || !title) {
     console.log("Invalid data passed into request");
@@ -19,6 +19,7 @@ const createPaste = asyncHandler(async (req, res) => {
     content: content,
     password: password,
     slug: slug,
+    language: language,
   };
 
   try {
@@ -42,6 +43,7 @@ const getPaste = asyncHandler(async (req, res) => {
         title: results.title,
         slug: results.slug,
         content: results.content,
+        language: results.language,
       });
     } else {
       res.status(401).json({ error: "Incorrect password" });

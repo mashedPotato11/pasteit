@@ -11,6 +11,7 @@ const pasteModel = mongoose.Schema(
     },
     content: { type: String, trim: false },
     slug: String,
+    language: { type: String, default: "text" },
   },
   {
     timestamps: true,
